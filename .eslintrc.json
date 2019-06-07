@@ -1,0 +1,13 @@
+{
+    "extends": "google",
+    "parser": "babel-eslint",
+    "rules": {
+        "no-var": "off",
+        "indent": "off",
+        "no-tabs": "off",
+        "key-spacing": "off",
+        "require-jsdoc": "off",
+        "padded-blocks": "off",
+        "no-multi-spaces": "off"
+    }
+}
