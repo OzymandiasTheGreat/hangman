@@ -1,40 +1,40 @@
-$material-design-icons-font-directory-path: './webfonts/';
-@import '~material-design-icons-iconfont/src/material-design-icons';
+// $material-design-icons-font-directory-path: './webfonts/';
+// @import '~material-design-icons-iconfont/src/material-design-icons';
 
 // Variables
 @import '~materialize-css/sass/components/color-variables';
 @import '~materialize-css/sass/components/color-classes';
-$primary-color: color('grey', 'lighten-4');
-$secondary-color: color('purple', 'accent-1');
-$button-floating-background-hover: lighten($secondary-color, 15%);
-$button-floating-color: $primary-color;
-$sidenav-font-size: 16px;
-$sidenav-font-color: color('grey', 'darken-3');
-$sidenav-bg-color: color('grey', 'lighten-5');
-$label-font-size: 1rem;
-$input-disabled-color: lighten($sidenav-font-color, 60%);
-$input-disabled-solid-color: lighten($sidenav-font-color, 20%);
-@import '~materialize-css/sass/components/variables';
-// Fonts
-$font-stack: 'Lato', $font-stack;
-// Components
-@import '~materialize-css/sass/components/normalize';
-@import '~materialize-css/sass/components/global';
-@import '~materialize-css/sass/components/typography';
-@import '~materialize-css/sass/components/transitions';
-@import '~materialize-css/sass/components/buttons';
-@import '~materialize-css/sass/components/waves';
-@import '~materialize-css/sass/components/modal';
-@import '~materialize-css/sass/components/sidenav';
-@import '~materialize-css/sass/components/preloader';
-@import '~materialize-css/sass/components/tapTarget';
-@import '~materialize-css/sass/components/pulse';
-// Forms
-@import '~materialize-css/sass/components/forms/forms';
-@import '~materialize-css/sass/components/forms/checkboxes';
-@import '~materialize-css/sass/components/forms/radio-buttons';
-@import '~materialize-css/sass/components/forms/select';
-@import '~materialize-css/sass/components/forms/switches';
+// $primary-color: color('grey', 'lighten-4');
+// $secondary-color: color('purple', 'accent-1');
+// $button-floating-background-hover: lighten($secondary-color, 15%);
+// $button-floating-color: $primary-color;
+// $sidenav-font-size: 16px;
+// $sidenav-font-color: color('grey', 'darken-3');
+// $sidenav-bg-color: color('grey', 'lighten-5');
+// $label-font-size: 1rem;
+// $input-disabled-color: lighten($sidenav-font-color, 60%);
+// $input-disabled-solid-color: lighten($sidenav-font-color, 20%);
+// @import '~materialize-css/sass/components/variables';
+// // Fonts
+// $font-stack: 'Lato', $font-stack;
+// // Components
+// @import '~materialize-css/sass/components/normalize';
+// @import '~materialize-css/sass/components/global';
+// @import '~materialize-css/sass/components/typography';
+// @import '~materialize-css/sass/components/transitions';
+// @import '~materialize-css/sass/components/buttons';
+// @import '~materialize-css/sass/components/waves';
+// @import '~materialize-css/sass/components/modal';
+// @import '~materialize-css/sass/components/sidenav';
+// @import '~materialize-css/sass/components/preloader';
+// @import '~materialize-css/sass/components/tapTarget';
+// @import '~materialize-css/sass/components/pulse';
+// // Forms
+// @import '~materialize-css/sass/components/forms/forms';
+// @import '~materialize-css/sass/components/forms/checkboxes';
+// @import '~materialize-css/sass/components/forms/radio-buttons';
+// @import '~materialize-css/sass/components/forms/select';
+// @import '~materialize-css/sass/components/forms/switches';
 
 
 @keyframes shrink
@@ -75,7 +75,6 @@ aside
 			padding-left: 20px
 
 		a i
-			color: $secondary-color !important
 			margin-right: 16px !important
 
 		label
@@ -88,7 +87,7 @@ aside
 
 			span
 				font-size: 16px !important
-				color: $sidenav-font-color !important
+				color: color('grey', 'darken-3') !important
 
 		.switch
 			label
@@ -162,7 +161,7 @@ main
 		width: 100%
 		height: 56px
 		box-sizing: border-box
-		border-top: 2px solid $primary-color
+		border-top: 2px solid color('grey', 'lighten-4')
 
 		#attempt
 			display: flex

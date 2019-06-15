@@ -14,10 +14,15 @@ import responsiveType from 'postcss-responsive-type';
 
 
 export default {
+	external: ['jquery', 'materialize-css'],
 	input: 'src/main.js',
 	output: {
 		dir: 'dist/www/assets',
 		format: 'iife',
+		globals: {
+			'jquery': '$',
+			'materialize-css': 'M',
+		},
 		sourcemap: true,
 	},
 	plugins: [
@@ -68,10 +73,6 @@ export default {
 			{
 				files: 'src/assets/*.mp3',
 				dest: 'dist/www/assets'
-			},
-			{
-				files: 'node_modules/material-design-icons-iconfont/dist/fonts/**',
-				dest: 'dist/www/assets/webfonts'
 			},
 		]),
 		progress(),

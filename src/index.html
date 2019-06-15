@@ -6,13 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Hangman</title>
 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets//main.css">
 
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
 	<script src="./assets/main.js"></script>
 </head>
 <body>
 	<aside>
-		<ul id="menu" class="sidenav">
+		<ul id="menu" class="sidenav grey lighten-5 grey-text text-darken-3">
 			<li><h4><i class="material-icons">settings</i>Options</h4></li>
 			<li><div class="divider"></div></li>
 			<li><h6>Difficulty</h6></li>
@@ -54,7 +59,7 @@
 				</div>
 			</li>
 		</ul>
-		<a href="#" id="hamburger" data-target="menu" class="sidenav-trigger show-on-large btn-floating btn-large waves-effect"><i class="material-icons">menu</i></a>
+		<a href="#" id="hamburger" data-target="menu" class="sidenav-trigger show-on-large btn-floating btn-large waves-effect purple accent-1 grey-text text-lighten-4"><i class="material-icons">menu</i></a>
 	</aside>
 	<main class="purple darken-4 grey-text text-lighten-4">
 		<input type="text" name="guess" id="input">
