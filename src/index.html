@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Hangman</title>
+
+	<link rel="stylesheet" href="./assets//main.css">
+
+	<script src="./assets/main.js"></script>
+</head>
+<body>
+	<aside>
+		<ul id="menu" class="sidenav">
+			<li><h4><i class="material-icons">settings</i>Options</h4></li>
+			<li><div class="divider"></div></li>
+			<li><h6>Difficulty</h6></li>
+			<li>
+				<label class="waves-effect sidenav-close">
+					<input type="radio" name="difficulty" id="easy" value="easy">
+					<span>Easy</span>
+				</label>
+			</li>
+			<li>
+				<label class="waves-effect sidenav-close">
+					<input type="radio" name="difficulty" id="normal" value="normal">
+					<span>Normal</span>
+				</label>
+			</li>
+			<li>
+				<label class="waves-effect sidenav-close">
+					<input type="radio" name="difficulty" id="hard" value="hard">
+					<span>Hard</span>
+				</label>
+			</li>
+			<li><div class="divider"></div></li>
+			<li><a id="show-hint" href="#" class="waves-effect sidenav-close"><i class="material-icons">help</i>Hint</a></li>
+			<li><a id="pause" href="#" class="waves-effect sidenav-close"><i class="material-icons">pause_circle_filled</i>Pause</a></li>
+			<li><div class="divider"></div></li>
+			<li><h6>Other</h6></li>
+			<li>
+				<div class="switch sidenav-close">
+					<label class="waves-effect">
+						<input type="checkbox" name="sound" id="sound">
+						<span class="lever"></span>
+						<span>Sound</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="input-field waves-effect">
+					<select name="language" id="language"></select>
+				</div>
+			</li>
+		</ul>
+		<a href="#" id="hamburger" data-target="menu" class="sidenav-trigger show-on-large btn-floating btn-large waves-effect"><i class="material-icons">menu</i></a>
+	</aside>
+	<main class="purple darken-4 grey-text text-lighten-4">
+		<input type="text" name="guess" id="input">
+		<div id="progress"></div>
+		<div id="hint">This is a hint. Let's make it reasonably long. Some more text. And even more text.</div>
+		<div id="word">
+			<div class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-grey">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-yellow">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-green">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="attempt-wrapper">
+			<div id="attempt">
+				<div class="attempt">Q</div>
+				<div class="attempt">T</div>
+				<div class="attempt">U</div>
+				<div class="attempt">I</div>
+				<div class="attempt">P</div>
+				<div class="attempt">S</div>
+				<div class="attempt">F</div>
+				<div class="attempt">H</div>
+				<div class="attempt">J</div>
+				<div class="attempt">K</div>
+				<div class="attempt">Z</div>
+				<div class="attempt">X</div>
+				<div class="attempt">C</div>
+				<div class="attempt">B</div>
+				<div class="attempt">M</div>
+			</div>
+		</div>
+		<div id="overlay" class="modal transparent">
+			<div class="modal-content">
+				<h2 id="message" class="center-align">You Won!</h2>
+			</div>
+		</div>
+		<div id="cookie-warning" class="modal bottom-sheet grey lighten-5 grey-text text-darken-3">
+			<div class="modal-content grey lighten-5">
+				<h4>This website uses Local Storage</h4>
+				<p>
+					That's an alternative to cookies,
+					but it still stores data on your computer.
+				</p>
+				<p>
+					There are no trackers on this website.
+				</p>
+				<p>
+					The only data stored is your game preferences.
+				</p>
+				<p class="center-align">
+					<a href="#" id="cookies-ok" class="btn btn-large waves-effect">OK</a>
+				</p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

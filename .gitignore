@@ -1,5 +1,7 @@
 **/__pycache__/*
 .venv
 .vscode
-.flaskenv
+.env
 node_modules
+www
+dist

@@ -1,0 +1,188 @@
+$material-design-icons-font-directory-path: './webfonts/';
+@import '~material-design-icons-iconfont/src/material-design-icons';
+
+// Variables
+@import '~materialize-css/sass/components/color-variables';
+@import '~materialize-css/sass/components/color-classes';
+$primary-color: color('grey', 'lighten-4');
+$secondary-color: color('purple', 'accent-1');
+$button-floating-background-hover: lighten($secondary-color, 15%);
+$button-floating-color: $primary-color;
+$sidenav-font-size: 16px;
+$sidenav-font-color: color('grey', 'darken-3');
+$sidenav-bg-color: color('grey', 'lighten-5');
+$label-font-size: 1rem;
+$input-disabled-color: lighten($sidenav-font-color, 60%);
+$input-disabled-solid-color: lighten($sidenav-font-color, 20%);
+@import '~materialize-css/sass/components/variables';
+// Fonts
+$font-stack: 'Lato', $font-stack;
+// Components
+@import '~materialize-css/sass/components/normalize';
+@import '~materialize-css/sass/components/global';
+@import '~materialize-css/sass/components/typography';
+@import '~materialize-css/sass/components/transitions';
+@import '~materialize-css/sass/components/buttons';
+@import '~materialize-css/sass/components/waves';
+@import '~materialize-css/sass/components/modal';
+@import '~materialize-css/sass/components/sidenav';
+@import '~materialize-css/sass/components/preloader';
+@import '~materialize-css/sass/components/tapTarget';
+@import '~materialize-css/sass/components/pulse';
+// Forms
+@import '~materialize-css/sass/components/forms/forms';
+@import '~materialize-css/sass/components/forms/checkboxes';
+@import '~materialize-css/sass/components/forms/radio-buttons';
+@import '~materialize-css/sass/components/forms/select';
+@import '~materialize-css/sass/components/forms/switches';
+
+
+@keyframes shrink
+	from
+		top: 50%
+		transform: translateX(-50%) scale(1, 1)
+	to
+		top: 80%
+		transform: translateX(-50%) scale(0.6, 0.6)
+
+
+@keyframes grow
+	from
+		top: 80%
+		transform: translateX(-50%) scale(0.6, 0.6)
+	to
+		top: 50%
+		transform: translateX(-50%) scale(1, 1)
+
+
+aside
+	position: relative
+
+	#hamburger
+		position: absolute
+		top: 1.5rem
+		left: 1.5rem
+
+		i
+			font-size: 32px
+
+	li
+		h4 i
+			padding-left: 20px
+			padding-right: 25px
+
+		h6
+			padding-left: 20px
+
+		a i
+			color: $secondary-color !important
+			margin-right: 16px !important
+
+		label
+			width: 100%
+			box-sizing: border-box
+			padding: 0 32px
+
+			input
+				margin-right: 32px
+
+			span
+				font-size: 16px !important
+				color: $sidenav-font-color !important
+
+		.switch
+			label
+				font-size: inherit
+
+				input
+					width: 0
+					margin: 0
+
+				.lever
+					margin: 0 16px 0 -16px
+
+		.input-field
+			width: 100%
+			box-sizing: border-box
+			padding: 0 32px
+
+			ul[id^="select-options-"] li span, input[data-target^="select-options-"]
+				text-transform: capitalize
+
+
+main
+	position: relative
+	height: 100vh
+
+	#input
+		position: absolute
+		top: -200%
+
+	#progress
+		@extend .pink, .accent-3
+		position: fixed
+		top: 0
+		left: 0
+		height: 5px
+		width: 100%
+		transition: width 1s linear
+
+	#hint
+		font-size: responsive 20px 32px
+		text-align: center
+		width: 90%
+		line-height: 110%
+		position: absolute
+		top: 20%
+		left: 50%
+		transform: translateX(-50%)
+		opacity: 0
+		transition: opacity 1s
+
+	#word
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-around
+		align-items: center
+		font-size: responsive 24px 64px
+		font-weight: 700
+		width: 80%
+
+		.letter
+			margin: 0 3px
+
+	.attempt-wrapper
+		position: fixed
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 56px
+		box-sizing: border-box
+		border-top: 2px solid $primary-color
+
+		#attempt
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-between
+			align-items: center
+			font-size: responsive 14px 48px
+			font-weight: 600
+			width: 60%
+			height: 100%
+			margin: auto
+
+	#overlay
+		top: 50% !important
+		transform: translateY(-50%) scaleX(1) scaleY(1) !important
+		box-shadow: none
+
+		h2
+			font-size: responsive 64px 96px
+			font-weight: 700
+
+	#cookie-warning
+		z-index: 2002 !important
