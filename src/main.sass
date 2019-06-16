@@ -1,40 +1,13 @@
-// $material-design-icons-font-directory-path: './webfonts/';
-// @import '~material-design-icons-iconfont/src/material-design-icons';
-
-// Variables
-@import '~materialize-css/sass/components/color-variables';
-@import '~materialize-css/sass/components/color-classes';
-// $primary-color: color('grey', 'lighten-4');
-// $secondary-color: color('purple', 'accent-1');
-// $button-floating-background-hover: lighten($secondary-color, 15%);
-// $button-floating-color: $primary-color;
-// $sidenav-font-size: 16px;
-// $sidenav-font-color: color('grey', 'darken-3');
-// $sidenav-bg-color: color('grey', 'lighten-5');
-// $label-font-size: 1rem;
-// $input-disabled-color: lighten($sidenav-font-color, 60%);
-// $input-disabled-solid-color: lighten($sidenav-font-color, 20%);
-// @import '~materialize-css/sass/components/variables';
-// // Fonts
-// $font-stack: 'Lato', $font-stack;
-// // Components
-// @import '~materialize-css/sass/components/normalize';
-// @import '~materialize-css/sass/components/global';
-// @import '~materialize-css/sass/components/typography';
-// @import '~materialize-css/sass/components/transitions';
-// @import '~materialize-css/sass/components/buttons';
-// @import '~materialize-css/sass/components/waves';
-// @import '~materialize-css/sass/components/modal';
-// @import '~materialize-css/sass/components/sidenav';
-// @import '~materialize-css/sass/components/preloader';
-// @import '~materialize-css/sass/components/tapTarget';
-// @import '~materialize-css/sass/components/pulse';
-// // Forms
-// @import '~materialize-css/sass/components/forms/forms';
-// @import '~materialize-css/sass/components/forms/checkboxes';
-// @import '~materialize-css/sass/components/forms/radio-buttons';
-// @import '~materialize-css/sass/components/forms/select';
-// @import '~materialize-css/sass/components/forms/switches';
+@import '~materialize-css/sass/components/color-variables'
+$primary-color: color('purple', 'accent-1')
+$secondary-color: color('red', 'accent-2')
+$success-color: color('light-green', 'base')
+$error-color: color('red', 'darken-4')
+$link-color: color('pink', 'accent-2')
+$button-floating-color: color('grey', 'lighten-5')
+$sidenav-font-color: color('grey', 'darken-3')
+$sidenav-bg-color: color('grey', 'lighten-4')
+@import '~materialize-css/sass/materialize'
 
 
 @keyframes shrink
@@ -57,6 +30,8 @@
 
 aside
 	position: relative
+	font-family: 'Lato', $font-stack, sans-serif
+	font-weight: 400
 
 	#hamburger
 		position: absolute
@@ -66,47 +41,47 @@ aside
 		i
 			font-size: 32px
 
-	li
-		h4 i
-			padding-left: 20px
-			padding-right: 25px
+	ul#menu.sidenav li
+		h4
+			padding: 0 32px
+
+			i
+				margin: 0 32px 0 0
 
 		h6
-			padding-left: 20px
+			padding-left: 32px
 
-		a i
-			margin-right: 16px !important
+		div.input-field
+			width: 100%
+			box-sizing: border-box
+			padding: 0 32px
+			overflow: visible
+
+			.select-wrapper
+				overflow: visible
+
+			ul[id^="select-options-"] li span, input[data-target^="select-options-"]
+				text-transform: capitalize
 
 		label
 			width: 100%
 			box-sizing: border-box
 			padding: 0 32px
 
-			input
-				margin-right: 32px
-
 			span
-				font-size: 16px !important
-				color: color('grey', 'darken-3') !important
+				font-size: 14px
+				color: $sidenav-font-color
+				padding: 0 0 0 57px
 
 		.switch
-			label
-				font-size: inherit
+			.lever
+				padding: initial
+				margin: 0
 
-				input
-					width: 0
-					margin: 0
-
-				.lever
-					margin: 0 16px 0 -16px
-
-		.input-field
-			width: 100%
-			box-sizing: border-box
-			padding: 0 32px
-
-			ul[id^="select-options-"] li span, input[data-target^="select-options-"]
-				text-transform: capitalize
+			.label
+				font: inherit
+				color: $sidenav-font-color
+				padding: 0 18px
 
 
 main
@@ -127,6 +102,8 @@ main
 		transition: width 1s linear
 
 	#hint
+		font-family: 'Cairo', $font-stack, sans-serif
+		font-weight: 400
 		font-size: responsive 20px 32px
 		text-align: center
 		width: 90%
@@ -139,6 +116,8 @@ main
 		transition: opacity 1s
 
 	#word
+		font-family: 'Lato', $font-stack, sans-serif
+		font-weight: 700
 		position: absolute
 		top: 50%
 		left: 50%
@@ -164,12 +143,13 @@ main
 		border-top: 2px solid color('grey', 'lighten-4')
 
 		#attempt
+			font-family: 'Cairo', $font-stack, sans-serif
+			font-weight: 600
 			display: flex
 			flex-flow: row nowrap
 			justify-content: space-between
 			align-items: center
 			font-size: responsive 14px 48px
-			font-weight: 600
 			width: 60%
 			height: 100%
 			margin: auto
@@ -177,11 +157,19 @@ main
 	#overlay
 		top: 50% !important
 		transform: translateY(-50%) scaleX(1) scaleY(1) !important
-		box-shadow: none
+		box-shadow: none !important
 
 		h2
-			font-size: responsive 64px 96px
+			font-family: 'Lato', $font-stack, sans-serif
 			font-weight: 700
+			font-size: responsive 64px 96px
 
 	#cookie-warning
-		z-index: 2002 !important
+		font-family: 'Cairo', $font-stack, sans-serif
+		z-index: 2002
+
+		h4
+			font-weight: 600
+
+		p
+			font-weight: 400

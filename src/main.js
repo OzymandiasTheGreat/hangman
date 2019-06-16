@@ -276,28 +276,12 @@ $(function () {
 		}
 		UI.language.val(lang).change();
 		UI.language.change( function (event) {
-			UI.components.dropdownContent.hide();
 			lang = event.target.value;
 			window.localStorage.setItem(lsLanguage, event.target.value);
 			game.pause('');
 			UI.material.overlay.close();
 		});
 		UI.material.language = M.FormSelect.init(UI.language, {})[0];
-		UI.components.dropdownContent = $('.sidenav .select-dropdown.dropdown-content');
-		UI.components.dropdownTrigger = $('.sidenav .select-dropdown.dropdown-trigger');
-		UI.components.dropdownContent.hide();
-		UI.components.dropdownTrigger.click(function () {
-			if (UI.components.dropdownContent.is(':visible')) {
-				UI.components.dropdownContent.hide();
-			} else {
-				UI.components.dropdownContent.show();
-			}
-		});
-		UI.components.menu.click(function (event) {
-			if ($(event.target).parents('.select-wrapper').length < 1) {
-				UI.components.dropdownContent.hide();
-			}
-		});
 	});
 
 	UI.main.click(() => UI.input.focus());
