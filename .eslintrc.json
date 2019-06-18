@@ -16,7 +16,7 @@
     },
     "rules": {
         "accessor-pairs": "error",
-        "array-bracket-newline": "error",
+        "array-bracket-newline": "off",
         "array-bracket-spacing": [
             "error",
             "never"
@@ -43,7 +43,7 @@
         ],
         "callback-return": "error",
         "camelcase": "error",
-        "capitalized-comments": "error",
+        "capitalized-comments": "off",
         "class-methods-use-this": "error",
         "comma-dangle": "off",
         "comma-spacing": [

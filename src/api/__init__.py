@@ -21,6 +21,7 @@ if app.config['ENV'] == 'development':
 	from dotenv import load_dotenv
 	load_dotenv(str(Path('../.env').resolve()))
 	VALID_ORIGIN.add('localhost')
+	VALID_ORIGIN.add('localhost:3000')
 	VALID_ORIGIN.add('192.168.1.102')
 
 

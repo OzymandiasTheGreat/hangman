@@ -1,11 +1,10 @@
 import $ from 'jquery';
 import M from 'materialize-css';
-import CSS from './main.sass';    // eslint-disable-line no-unused-vars
 
 
 const API = {
 	languages: './api/languages',
-	random: './api/random'
+	random: './api/random',
 };
 const AUDIO = {
 	correct: './assets/decide.mp3',
