@@ -6,8 +6,8 @@ from pony.orm import Database, Required, Optional, Json
 
 db = Database()
 db.bind(
-	provider='postgres', user='hangman', password=os.environ['POSTGRES_PW'],
-	host='localhost', database='hangman')
+	provider='postgres', user=os.environ['POSTGRES_USER'], password=os.environ['POSTGRES_PASS'],
+	host=os.environ['POSTGRES_HOST'], database=os.environ['POSTGRES_DB'])
 
 
 class Word(db.Entity):
