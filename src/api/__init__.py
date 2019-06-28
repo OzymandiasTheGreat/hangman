@@ -5,12 +5,14 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 from ast import literal_eval
+from dotenv import load_dotenv, find_dotenv
 from flask import Flask, request, Response
 from pony.flask import Pony
 from pony.orm import select
 from googletrans import Translator, LANGUAGES
 
 
+load_dotenv(find_dotenv())
 app = Flask(__name__)
 Pony(app)
 translator = Translator()
@@ -18,7 +20,6 @@ VALID_ORIGIN = literal_eval(os.environ['VALID_ORIGIN'])
 
 
 if app.config['ENV'] == 'development':
-	from dotenv import load_dotenv
 	load_dotenv(str(Path('../.env').resolve()))
 	VALID_ORIGIN.add('localhost')
 	VALID_ORIGIN.add('localhost:3000')

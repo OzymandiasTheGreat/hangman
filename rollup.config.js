@@ -88,6 +88,10 @@ export default {
 				files: 'requirements.txt',
 				dest: dest(),
 			},
+			{
+				files: 'util/*',
+				dest: dest('api', 'util'),
+			},
 		]),
 		progress(),
 		filesize(),
