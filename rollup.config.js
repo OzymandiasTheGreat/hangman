@@ -88,6 +88,15 @@ export default {
 				files: 'requirements.txt',
 				dest: dest(),
 			},
+			{
+				files: 'util/*',
+				dest: dest('util'),
+			},
+			{
+				files: 'wordset-dictionary/',
+				dest: dest(),
+				options: { parents: true },
+			},
 		]),
 		progress(),
 		filesize(),
